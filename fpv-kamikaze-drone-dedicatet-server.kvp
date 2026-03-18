@@ -15,7 +15,7 @@ App.AdminMethod=STDIO
 App.HasReadableConsole=true
 App.HasWritableConsole=false
 App.DisplayName=FPV Kamikaze Drone Dedicatet Server
-App.CommandLineArgs=FPVKamikazeDrone -log -stdout -FullStdOutLogOutput -unattended -port={{$ApplicationPort1}}
+App.CommandLineArgs=FPVKamikazeDrone -log -stdout -FullStdOutLogOutput -unattended -port={{$MainGamePort}}
 App.WindowsCommandLineArgs=
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 
