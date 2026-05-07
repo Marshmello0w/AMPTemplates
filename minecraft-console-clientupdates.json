@@ -1,9 +1,29 @@
 [
     {
-        "UpdateStageName": "",
+        "UpdateStageName": "Download / Update MCC",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "curl -fsSL https://mccteam.github.io/install.sh | sh",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/sh",
+        "UpdateSourceArgs": "-c \"curl -fsSL https://mccteam.github.io/install.sh | sh\"",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Set Permissions",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "MinecraftClient",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Generate Configs",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "StartApplication",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
